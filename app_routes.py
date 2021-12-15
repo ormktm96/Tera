@@ -116,3 +116,10 @@ def user(username):
         {'author': user, 'body': 'Test post #2'}
     ]
     return render_template('user.html', user=user, posts=posts)
+
+@app.route('/user/<username>')
+@login_required
+def user(username):
+    # ...
+    form = EmptyForm()
+    return render_template('user.html', user=user, posts=posts, form=form)

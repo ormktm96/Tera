@@ -15,3 +15,9 @@ from app.forms import LoginForm
 def login():
     form = LoginForm()
     return render_template('login.html', title='Sign In', form=form)
+
+@app.route('/edit_profile', methods=['GET', 'POST'])
+@login_required
+def edit_profile():
+    form = EditProfileForm(current_user.username)
+    # ...

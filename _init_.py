@@ -104,3 +104,10 @@ if not app.debug:
     app.logger.setLevel(logging.INFO)
     app.logger.info('Microblog startup')
 I'
+
+# ...
+from flask_mail import Mail
+
+app = Flask(__name__)
+# ...
+mail = Mail(app)

@@ -88,3 +88,7 @@
         </p>
         {% endif %}
         ...
+
+                {% if user.last_seen %}
+                <p>Last seen on: {{ moment(user.last_seen).format('LLL') }}</p>
+                {% endif %}

@@ -125,3 +125,10 @@ from flask_moment import Moment
 app = Flask(__name__)
 # ...
 moment = Moment(app)
+
+# ...
+from flask_babel import Babel
+
+app = Flask(__name__)
+# ...
+babel = Babel(app)

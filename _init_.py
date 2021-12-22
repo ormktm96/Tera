@@ -111,3 +111,10 @@ from flask_mail import Mail
 app = Flask(__name__)
 # ...
 mail = Mail(app)
+
+ ...
+from flask_bootstrap import Bootstrap
+
+app = Flask(__name__)
+# ...
+bootstrap = Bootstrap(app)

@@ -132,3 +132,11 @@ from flask_babel import Babel
 app = Flask(__name__)
 # ...
 babel = Babel(app)
+
+from flask import request
+
+# ...
+
+@babel.localeselector
+def get_locale():
+    return request.accept_languages.best_match(app.config['LANGUAGES'])

@@ -118,3 +118,10 @@ from flask_bootstrap import Bootstrap
 app = Flask(__name__)
 # ...
 bootstrap = Bootstrap(app)
+
+# ...
+from flask_moment import Moment
+
+app = Flask(__name__)
+# ...
+moment = Moment(app)

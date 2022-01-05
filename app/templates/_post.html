@@ -36,3 +36,7 @@
                 {% endif %}
 
                 <span id="post{{ post.id }}">{{ post.body }}</span>
+
+                <span id="translation{{ post.id }}">
+                    <a href="#">{{ _('Translate') }}</a>
+                </span>

@@ -113,3 +113,13 @@ def index():
         post = Post(body=form.post.data, author=current_user,
                     language=language)
         # ...
+        
+ from flask import jsonify
+from app.translate import translate
+
+@app.route('/translate', methods=['POST'])
+@login_required
+def translate_text():
+    return jsonify({'text': translate(request.form['text'],
+                                      request.form['source_language'],
+                                      request.form['dest_language'])})

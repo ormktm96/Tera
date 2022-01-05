@@ -145,3 +145,14 @@ def get_locale():
 def get_locale():
     # return request.accept_languages.best_match(app.config['LANGUAGES'])
     return 'es'
+
+app = Flask(__name__)
+
+# ...
+
+from app.errors import bp as errors_bp
+app.register_blueprint(errors_bp)
+
+# ...
+
+from app import routes, models  # <-- remove errors from this import!

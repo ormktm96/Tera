@@ -106,3 +106,7 @@ class User(UserMixin, db.Model):
 class Post(db.Model):
     # ...
     language = db.Column(db.String(5))
+
+class Post(db.Model):
+    __searchable__ = ['body']
+    # ...

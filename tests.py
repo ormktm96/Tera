@@ -87,3 +87,9 @@ class UserModelCase(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
+
+from config import Config
+
+class TestConfig(Config):
+    TESTING = True
+    SQLALCHEMY_DATABASE_URI = 'sqlite://'

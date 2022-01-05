@@ -42,3 +42,7 @@ load_dotenv(os.path.join(basedir, '.env'))
 
 class Config(object):
     # ...
+
+class Config(object):
+    # ...
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')

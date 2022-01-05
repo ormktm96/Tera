@@ -102,3 +102,7 @@ class User(UserMixin, db.Model):
         except:
             return
         return User.query.get(id)
+
+class Post(db.Model):
+    # ...
+    language = db.Column(db.String(5))
